@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+:root {
+    --header-back: #090941;
+    --text-color: #35335d;
+    --body: #f5f7fa;
+    --accent-sg: #ee3c45;
+    --gray: #f1f1f1;
+
+    font-size: 15px;
+}
+
+/* -- reset */
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box;
+
+    list-style: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+body {
+    background-color: var(--body);
+}
+img {
+    width: 100%;
+    object-fit: contain;
+}
+/* -- login */
+.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    padding: 0 10px;
+}
+h2 {
+    font-size: 1.87rem;
+    margin-bottom: 30px;
+    line-height: 37px;
+}
+header {
+    background-color: var(--header-back);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+header img {
+    height: 70px;
+}
+.login-form {
+    background-color: white;
+    padding: 30px;
+    width: 500px;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px 0 rgb(184 184 203 / 20%);
+}
+.login-form > p:last-child {
+    text-align: center;
+}
+.login-error {
+    color: var(--accent-sg);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+form > p {
+    width: 100%;
+    margin-bottom: 20px;
+}
+p.subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 5px 0;
+    outline: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid var(--header-back);
+}
+input[type="submit"] {
+    background-color: var(--accent-sg);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    header img {
+        height: 50px;
+    }
+}
+
+/* --------- dashboard */
+.content {
+    padding: 0 10px;
+}
+.content * {
+    font-family: "Montserrat", sans-serif;
+}
+header.dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+nav.mobile {
+    display: none;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+nav ul li:hover {
+    color: var(--accent-sg);
+}
+nav ul li {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.tabs {
+    margin-bottom: 50px;
+    background-color: white;
+    overflow-x: scroll;
+}
+.tabs ul {
+    display: flex;
+    gap: 25px;
+    /* padding: 10px 0; */
+}
+.tabs ul li {
+    cursor: pointer;
+    padding: 10px;
+    white-space: nowrap;
+    /* background-color: gray; */
+}
+.tabs ul li.active {
+    color: var(--header-back);
+    font-weight: 600;
+    border-bottom: 2px solid var(--header-back);
+}
+.rectangle {
+    background-color: var(--header-back);
+    display: inline-block;
+    width: 10%;
+    max-width: 50px;
+    height: 3px;
+}
+h3,
+h3 span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+h4,
+h4 span {
+    font-size: 1.2rem;
+}
+h4 {
+    margin-bottom: 20px;
+}
+section {
+    margin-bottom: 50px;
+}
+.account-container {
+    overflow-x: scroll;
+}
+.account-card,
+tbody {
+    background-color: white;
+}
+.account-card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 350px;
+    max-width: 360px;
+}
+.account-card .details img {
+    width: 25px;
+}
+.account-card .details p {
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+.account-card .name {
+    font-weight: 500;
+    font-size: 1rem !important;
+}
+.account-name-container {
+    margin-bottom: 5px;
+}
+.account-card .badge {
+    background-color: rgb(253, 231, 233);
+    color: var(--accent-sg);
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 0.75rem;
+}
+.account-card .details {
+    display: flex;
+    gap: 20px;
+}
+.account-card .amounts {
+    display: flex;
+    justify-content: space-around;
+}
+.account-card .amounts p:first-child {
+    text-transform: uppercase;
+    font-size: 0.74rem;
+}
+.account-card .amounts p:last-child {
+    font-weight: 600;
+    /* font-size: 0.9rem; */
+}
+.separation {
+    height: 2px;
+    width: 100%;
+    background-color: var(--gray);
+}
+
+.history-table {
+    overflow-x: scroll;
+}
+table {
+    width: 100%;
+    min-width: 500px;
+}
+table * {
+    font-size: 0.95rem;
+}
+td {
+    padding: 10px 0;
+}
+td,
+th {
+    text-align: left;
+}
+tbody tr:hover {
+    background-color: var(--body);
+    cursor: pointer;
+}
+th {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.user-name {
+    /* display: flex; */
+    padding: 0 10px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.user-name h1 {
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/x-icon" href="../favicon-32.png">
+    <link rel="stylesheet" href="../styles/all.css">
+    <title>SG | Tableau de bord </title>
+</head>
+<body>
+    <header class="dashboard">
+        <div class="logo">
+            <img src="../sg__white.png" alt="logo sg">
+        </div>
+        <nav>
+            <ul>
+                <li>MES COMPTES</li>
+                <li>TRANSACTIONS</li>
+                <li>SERVICES EN LIGNE</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tabs">
+        <ul>
+            <li class="active">MES COMPTES</li>
+            <li>MES CREDITS</li>
+            <li>MES PLACEMENTS</li>
+        </ul>
+    </div>
+    <div class="user-name">
+        <h1>Audrey Peterson</h1>
+    </div>
+    <div class="content">
+        <section class="account-container">
+            <div>
+                <h3><span>Mon compte</span><br>
+                    <div class="rectangle"></div>
+                </h3>
+                <h4>Sélectionnez un compte pour afficher le détail.</h4>
+                <!-- account cards -->
+                <div class="accounts">
+                    <div class="account-card">
+                        <div class="details">
+                            <div class="icon">
+                                <img src="../bank.png" alt="bank icon">
+                            </div>
+                            <div>
+                                <p class="account-name-container">
+                                    <span class="name">COMPTE COURANT</span>
+                                    <span class="badge">bloqué</span>
+                                </p>
+                                <p>00008 10010 00107365671066</p>
+                                <p>AGENCE PRINCIPALE</p>
+                            </div>
+                        </div>
+                        <div class="separation"></div>
+                        <div class="amounts">
+                            <div>
+                                <p>Solde actuel</p>
+                                <p>88900 €</p>
+                            </div>
+                            <div>
+                                <p>À venir</p>
+                                <p>3000 €</p>
+                            </div>
+                            <div>
+                                <p>Frais débloquage</p>
+                                <p>8 000 €</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h4><span>Historique des opérations</span><br>
+                <div class="rectangle"></div>
+            </h4>
+            <!-- History table -->
+            <div class="history-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date d'opération</th>
+                            <th>Date de valeur</th>
+                            <th>Nature de l'opérations</th>
+                            <th>Montant</th>
+                            <th>État</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>04-12-2019</td>
+                            <td>29-11-2019</td>
+                            <td>VRT TR VIREMENT TRANSFERT TO ALBAN ANN</td>
+                            <td>-100 000</td>
+                            <td>En cours
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>04-12-2019</td>
+                            <td>03-12-2019</td>
+                            <td>VRT TR VIREMENT EN FAVEUR DE KEVIN TONTO</td>
+                            <td>-300 000</td>
+                            <td>Effectué</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>29-11-2019</td>
+                            <td>26-11-2019</td>
+                            <td>RG PREMIUM 2811 2012</td>
+                            <td>-5000</td>
+                            <td>En cours</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>29-11-2019</td>
+                            <td>26-11-2019</td>
+                            <td>RG PREMIUM 2811 2012</td>
+                            <td>-5 000
+                            </td>
+                            <td>
+                                En cours
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>29-11-2019</td>
+                            <td>26-11-2019</td>
+                            <td>PREMIUM 2811 2012</td>
+                            <td>-5 000</td>
+                            <td>En cours </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>29-11-2019</td>
+                            <td>26-11-2019</td>
+                            <td>RG PREMIUM 2811 2012</td>
+                            <td>-5 000</td>
+                            <td>Annulé
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script>
+
+        const nav = document.querySelector("nav")
+
+        function setMobile () {
+            if (window.innerWidth < 1000) {
+                if (!nav.classList.contains("mobile")) {
+                    nav.classList.add("mobile")
+                }
+            } else {
+                if (nav.classList.contains("mobile")) {
+                    nav.classList.remove("mobile")
+                }
+            }
+        }
+
+        function verifMobile () {
+            window.addEventListener("resize", (e) => {
+                setMobile()
+            }) 
+        }; 
+
+        window.addEventListener("load", () => {setMobile()})
+        verifMobile()
+
+    </script>
+</body>
+</html>

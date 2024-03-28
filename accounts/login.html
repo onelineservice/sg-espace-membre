@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" type="image/x-icon" href="../favicon-32.png">
+    <link rel="stylesheet" href="../styles/all.css">
+    <title>SG | Espace membre </title>
+</head>
+<body>
+
+    <header>
+        <img src="../sg__white.png" alt="logo sg">
+    </header>
+    <div class="body-content">
+        <div class="login-form">
+            <h2>Bienvenue dans votre espace SG Connect</h2>
+            <p class="subtitle">Veuillez renseigner votre identifiant et mot de passe</p>
+            <p class="login-error"></p>
+            <form action="#">
+                <p>
+                    <input type="text" placeholder="Saisissez votre identifiant">
+                </p>
+                <p>
+                    <input type="password" placeholder="Saisissez votre mot de passe">
+                </p>
+                <input type="submit" value="Identifiez-vous">
+            </form>
+            <p>
+                <a href="#">Mot de passe oublié ?</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function login(id, password) {
+            if (id !== ID || password !== PASSWORD) {
+                const loginError = "Identifiant ou mot de passe invalide";
+                submitBtn.style.backgroundColor = "";
+                submitBtn.style.cursor = "pointer";
+                document.querySelector("input[type=password]").value = "";
+                document.querySelector(".login-error").innerText = loginError;
+            } else {
+                window.location.href = "/sg-espace-membre.fr/accounts/dashboard.html";
+            }
+        } 
+
+        const ID = "51941012073";
+        const PASSWORD = "9152078";
+
+        const submitBtn = document.querySelector("input[type=submit]");
+        submitBtn.addEventListener("click", (e) => {
+            e.preventDefault()
+            submitBtn.style.backgroundColor = "#f0a7ab";
+            submitBtn.style.cursor = "not-allowed"
+            setTimeout(() => {
+                login(
+                    document.querySelector("input[type=text]").value,
+                    document.querySelector("input[type=password]").value,
+                )
+            }, 2000)
+        })
+    </script>
+</body>
+</html>
